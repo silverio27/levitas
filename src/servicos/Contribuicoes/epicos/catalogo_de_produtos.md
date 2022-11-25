@@ -27,7 +27,7 @@ A consulta **Todos produtos** deve retornar as seguintes informações:
 
 | Produto | Pontos | Fotos | Status | Quantidade
 |--- |--- |--- |--- | ---
-| Shape | 13 |![foto](/fotos/shape.png) | Disponível | 4
-| Roda | 8 | ![foto](/fotos/roda.png) | Disponível | 1
-| Lixa | 3 | ![foto](/fotos/lixa.png) | Acabou | 0
-| Rolamento |2 | ![foto](/fotos/rolamento.png) | Bloqueado | 0
+| Shape | 13 |![foto](../fotos/shape.png) | Disponível | 4
+| Roda | 8 | ![foto](../fotos/roda.png) | Disponível | 1
+| Lixa | 3 | ![foto](../fotos/lixa.png) | Acabou | 0
+| Rolamento |2 | ![foto](../fotos/rolamento.png) | Bloqueado | 0
