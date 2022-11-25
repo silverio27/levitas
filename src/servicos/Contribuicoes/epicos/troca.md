@@ -1,6 +1,6 @@
 # Troca
 
-[voltar](././README.md)
+[voltar](.././README.md)
 
 ---
 

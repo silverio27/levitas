@@ -1,6 +1,6 @@
 # Contribuições [História]
 
-[voltar](/./README.md)
+[voltar](../README.md)
 
 Controle de atividade dos voluntariados cadastrados como beneficiados pelo programa de pontos da associação.
 
