@@ -1,6 +1,6 @@
 # Cadastro de atividades
 
-[voltar](/./README.md)
+[voltar](../README.md)
 
 ## Funcionalidades
 

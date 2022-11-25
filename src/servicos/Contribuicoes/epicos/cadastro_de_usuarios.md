@@ -1,6 +1,6 @@
 # Cadastro de usuários (Contribuidor)
 
-[voltar](/./README.md)
+[voltar](../README.md)
 
 ## Funcionalidades
 

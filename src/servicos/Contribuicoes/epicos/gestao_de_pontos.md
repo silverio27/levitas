@@ -1,6 +1,6 @@
 # Gestão de pontos
 
-[voltar](/./README.md)
+[voltar](../README.md)
 
 > A moeda da associação são os pontos obtidos pela execução das tarefas. Esses pontos podem ser trocados por peças na loja da Levitas (OSC). As peças são repassadas a preço de custo para os atletas. Exemplo: A associação adquiriu um shape diretamente com o fornecedor no valor de R$70.00. Para um atleta conseguir fazer a troca ele terá que obter 13 pontos. Cada ponto vale R$5,51, valor da hora do salário mínimo atual, 13 x R$5,51 = R$71,63.
 
