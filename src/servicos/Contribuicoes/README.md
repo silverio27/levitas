@@ -52,5 +52,7 @@ journey
 ```
 
 ## Repositório
+[Clique aqui](https://github.com/silverio27/levitas)
 
-## Gestão Visual()
+## Gestão Visual
+[Clique aqui](https://github.com/users/silverio27/projects/1)

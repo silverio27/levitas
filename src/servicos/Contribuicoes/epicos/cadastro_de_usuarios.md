@@ -1,4 +1,4 @@
-# Cadastro de usuários (Contribuidor)
+# Cadastro de usuários
 
 [voltar](../README.md)
 
