@@ -17,13 +17,13 @@ Fica acordado a disponibilidade de 1,5 horas por dia não considerando finais de
 
 ## Épicos
 
-|Nome | Duração (Dias)
-|--- | ---
-|[Cadastro de usuários](./epicos/cadastro_de_usuarios.md) | 13
-|[Cadastro de atividades](./epicos/cadastro_de_atividades.md) | 10
-|[Gestão de pontos](./epicos/gestao_de_pontos.md) | 11
-|[Troca](./epicos/troca.md) | 12
-|[Catálogo de produtos](./epicos/catalogo_de_produtos.md) | 14
+|Nome | Duração (Dias)| Status
+|--- | --- | ---
+|[Cadastro de usuários](./epicos/cadastro_de_usuarios.md) | 13 | A fazer
+|[Cadastro de atividades](./epicos/cadastro_de_atividades.md) | 10 | Dominio concluido
+|[Gestão de pontos](./epicos/gestao_de_pontos.md) | 11 | A fazer
+|[Troca](./epicos/troca.md) | 12 | A Fazer
+|[Catálogo de produtos](./epicos/catalogo_de_produtos.md) | 14 | A fazer
 
 ***Estimativa***: 60 dias
 
