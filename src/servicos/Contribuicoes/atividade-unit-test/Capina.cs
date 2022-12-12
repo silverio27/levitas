@@ -2,6 +2,7 @@ using System.Text.Json;
 using domain.CadastroDeAtividades.Entidades;
 using domain.CadastroDeAtividades.Enumeraveis;
 using domain.CadastroDeAtividades.ObjetosDeValor;
+using mocks_para_tests;
 using Xunit.Abstractions;
 using Xunit.Priority;
 

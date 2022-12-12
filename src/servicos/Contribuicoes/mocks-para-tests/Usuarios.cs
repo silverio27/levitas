@@ -1,6 +1,6 @@
 using domain.SeedWork;
 
-namespace atividade_unit_test;
+namespace mocks_para_tests;
 public class UsuarioMock : Usuario
 {
     public UsuarioMock(string idDeUsuario, string nome) : base(idDeUsuario, nome)

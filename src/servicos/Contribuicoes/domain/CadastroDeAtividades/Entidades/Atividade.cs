@@ -4,7 +4,7 @@ using domain.CadastroDeAtividades.ObjetosDeValor;
 using domain.SeedWork;
 
 namespace domain.CadastroDeAtividades.Entidades;
-public class Atividade : Entidade, IRaizDaAgregacao<Atividade>
+public class Atividade : RaizDaAgregacao
 {
     public string Nome { get; private set; }
     public string Descricao { get; private set; }
@@ -16,10 +16,8 @@ public class Atividade : Entidade, IRaizDaAgregacao<Atividade>
     public DateTime DataDaExecucao { get; private set; }
     public int Pontos { get { return (int)this.Tamanho; } private set { } }
 
-    public List<Historico<Atividade>> Historico { get; set; }
-
     public Atividade(string nome, string descricao, Tamanho tamanho, DateTime dataDaExecucao, Criador criador)
-    : base(criadoEm: DateTime.UtcNow, criador: criador)
+    : base(criador: criador)
     {
         Nome = nome;
         Descricao = descricao;
@@ -30,16 +28,10 @@ public class Atividade : Entidade, IRaizDaAgregacao<Atividade>
         DataDaExecucao = dataDaExecucao;
         Duracao = ObterDuracao();
         Pontos = Pontos;
-        Historico = new();
         AdicionarAlteracaoAoHistorico($"Atividade '{Nome}' criada");
     }
 
-    private string ObterDuracao() => $"{DataDaExecucao.ToString("HH:mm")} ao {DataDaExecucao.AddHours(Pontos).ToString("HH:mm")}";
-    private void AdicionarAlteracaoAoHistorico(string mensagem)
-    {
-        AtualizarDataDeAlteracao();
-        Historico.Add(new(this, mensagem));
-    }
+    private string ObterDuracao() => $"{DataDaExecucao.ToString("HH:mm")} ao {DataDaExecucao.AddHours(Pontos).ToString("HH:mm")}";    
 
     public void Ingressar(Contribuidor contribuidor)
     {
