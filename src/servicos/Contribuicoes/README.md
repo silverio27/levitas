@@ -23,7 +23,7 @@ Fica acordado a disponibilidade de 1,5 horas por dia não considerando finais de
 |[Cadastro de atividades](./epicos/cadastro_de_atividades.md) | 10 |  Concluido | A Fazer | A Fazer | A Fazer
 |[Gestão de pontos](./epicos/gestao_de_pontos.md) | 11 | Concluido | A fazer | A Fazer | A Fazer
 |[Troca](./epicos/troca.md) | 12 | A Fazer | A Fazer | A fazer | A Fazer
-|[Catálogo de produtos](./epicos/catalogo_de_produtos.md) | 14 | Em andamento | A fazer | A Fazer | A Fazer
+|[Catálogo de produtos](./epicos/catalogo_de_produtos.md) | 14 | Concluido | A fazer | A Fazer | A Fazer
 
 ***Estimativa***: 60 dias
 

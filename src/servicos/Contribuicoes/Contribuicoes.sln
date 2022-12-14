@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "atividade-unit-test", "ativ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gestao-de-pontos-unit-test", "gestao-de-pontos-unit-test\gestao-de-pontos-unit-test.csproj", "{0983BD96-2AD0-468B-AF45-0EF0124173B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "catalogo-de-produtos-unit-test", "catalogo-de-produtos-unit-test\catalogo-de-produtos-unit-test.csproj", "{2BFCB7D1-EC2D-4F90-9D0F-7A624D7BDF75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{0983BD96-2AD0-468B-AF45-0EF0124173B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0983BD96-2AD0-468B-AF45-0EF0124173B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0983BD96-2AD0-468B-AF45-0EF0124173B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2BFCB7D1-EC2D-4F90-9D0F-7A624D7BDF75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2BFCB7D1-EC2D-4F90-9D0F-7A624D7BDF75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2BFCB7D1-EC2D-4F90-9D0F-7A624D7BDF75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2BFCB7D1-EC2D-4F90-9D0F-7A624D7BDF75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
