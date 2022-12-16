@@ -70,9 +70,16 @@ public class Produto : RaizDaAgregacao
         var foto = UrlFotos.Find(x => x == url);
         if (foto is null)
             throw new ProdutoException("A foto informada não existe.");
-       
+
         UrlFotos.Remove(foto);
 
         AdicionarAlteracaoAoHistorico($"{criador.Nome} removeu uma foto.");
+    }
+
+    public void SubtrairEstoque(int quantidade = 1)
+    {
+        if (QuantidadeEmEstoque <= 0)
+            throw new ProdutoException("Não há estoque suficiente.");
+        QuantidadeEmEstoque -= quantidade;
     }
 }

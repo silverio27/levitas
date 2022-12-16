@@ -58,3 +58,9 @@ Na consulta **Todas as trocas** devem ser retornado os seguintes resultados:
 | Nome | Produto | Pontos Gastos | Link
 | --- | --- | --- | ---
 | Nathan | Shape | 13 | Link da troca
+
+## Atividade
+
+Nome | Inicio | Fim | Duracao | Commit
+--- | --- | --- | --- | ---
+Lucas |13/12/2022 21:14 |13/12/2022 22:15   | 59 min | -

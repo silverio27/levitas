@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gestao-de-pontos-unit-test"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "catalogo-de-produtos-unit-test", "catalogo-de-produtos-unit-test\catalogo-de-produtos-unit-test.csproj", "{2BFCB7D1-EC2D-4F90-9D0F-7A624D7BDF75}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "troca-unit-test", "troca-unit-test\troca-unit-test.csproj", "{C04FBDAB-D2B9-4EF5-9117-CB55EB1FB85E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{2BFCB7D1-EC2D-4F90-9D0F-7A624D7BDF75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BFCB7D1-EC2D-4F90-9D0F-7A624D7BDF75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BFCB7D1-EC2D-4F90-9D0F-7A624D7BDF75}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C04FBDAB-D2B9-4EF5-9117-CB55EB1FB85E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C04FBDAB-D2B9-4EF5-9117-CB55EB1FB85E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C04FBDAB-D2B9-4EF5-9117-CB55EB1FB85E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C04FBDAB-D2B9-4EF5-9117-CB55EB1FB85E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
