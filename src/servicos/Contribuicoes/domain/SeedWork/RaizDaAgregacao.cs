@@ -1,15 +1,17 @@
-using domain.CadastroDeAtividades.ObjetosDeValor;
+
+
+using domain.IdentidadeEAcesso;
 
 namespace domain.SeedWork;
-public abstract class RaizDaAgregacao: Entidade
+public abstract class RaizDaAgregacao : Entidade
 {
-    protected RaizDaAgregacao( Criador criador) : base(DateTime.UtcNow, criador)
+    protected RaizDaAgregacao(Criador criador) : base(DateTime.UtcNow, criador)
     {
-        Historico =new();
+        Historico = new();
     }
 
     public List<Historico<Entidade>> Historico { get; private set; }
-    
+
 
     public void AdicionarAlteracaoAoHistorico(string mensagem)
     {

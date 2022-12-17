@@ -1,6 +1,6 @@
 using System.Text.Json;
 using domain.CadastroDeAtividades.Enumeraveis;
-using domain.CadastroDeAtividades.ObjetosDeValor;
+using domain.IdentidadeEAcesso;
 using domain.SeedWork;
 
 namespace domain.CadastroDeAtividades.Entidades;
@@ -78,7 +78,4 @@ public class Atividade : RaizDaAgregacao
         Fotos.Remove(foto);
         AdicionarAlteracaoAoHistorico($"{criador.Nome} removeu uma foto.");
     }
-
-
-
 }

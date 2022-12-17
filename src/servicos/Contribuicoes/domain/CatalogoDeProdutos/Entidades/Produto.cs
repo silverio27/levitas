@@ -1,13 +1,8 @@
-using System.Dynamic;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using domain.CadastroDeAtividades.ObjetosDeValor;
 using domain.CatalogoDeProdutos.Enumeraveis;
 using domain.CatalogoDeProdutos.Excessoes;
+using domain.IdentidadeEAcesso;
 using domain.SeedWork;
-using domain.CatalogoDeProdutos.ObjetosDeValor;
+
 
 namespace domain.CatalogoDeProdutos.Entidades;
 public class Produto : RaizDaAgregacao
@@ -76,10 +71,21 @@ public class Produto : RaizDaAgregacao
         AdicionarAlteracaoAoHistorico($"{criador.Nome} removeu uma foto.");
     }
 
+    public void SubtrairEstoque(int quantidade, Criador criador)
+    {
+        if (QuantidadeEmEstoque <= 0)
+            throw new ProdutoException("Não há estoque suficiente.");
+        QuantidadeEmEstoque -= quantidade;
+
+        AdicionarAlteracaoAoHistorico($"{criador.Nome} subtraiu {quantidade} do estoque.");
+    }
+
     public void SubtrairEstoque(int quantidade = 1)
     {
         if (QuantidadeEmEstoque <= 0)
             throw new ProdutoException("Não há estoque suficiente.");
         QuantidadeEmEstoque -= quantidade;
+
+        AdicionarAlteracaoAoHistorico($"Subtraido {quantidade} do estoque pelo sistema de trocas.");
     }
 }

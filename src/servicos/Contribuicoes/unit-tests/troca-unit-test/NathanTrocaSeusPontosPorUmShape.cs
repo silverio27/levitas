@@ -1,5 +1,4 @@
-using domain.CadastroDeAtividades.ObjetosDeValor;
-using domain.Troca.Entidades;
+using domain.IdentidadeEAcesso;
 using mocks_para_tests;
 
 namespace troca_unit_test;

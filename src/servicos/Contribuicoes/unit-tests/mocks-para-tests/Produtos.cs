@@ -1,9 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using domain.CadastroDeAtividades.ObjetosDeValor;
 using domain.CatalogoDeProdutos.Entidades;
+using domain.IdentidadeEAcesso;
 
 namespace mocks_para_tests
 {

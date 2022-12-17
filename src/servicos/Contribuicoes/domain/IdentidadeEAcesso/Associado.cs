@@ -1,8 +1,9 @@
-using domain.CadastroDeAtividades.ObjetosDeValor;
+
 using domain.CatalogoDeProdutos.Entidades;
 using domain.SeedWork;
+using domain.Troca.Entidades;
 
-namespace domain.Troca.Entidades;
+namespace domain.IdentidadeEAcesso;
 public class Associado : RaizDaAgregacao
 {
     public Associado(Usuario usuario, Criador criador) : base(criador)
@@ -33,4 +34,8 @@ public class Associado : RaizDaAgregacao
         produto.SubtrairEstoque();
         Trocas.Add(resgate);
     }
+
+    public Criador ToCriador() => new Criador(IdDeUsuario, Nome);
+    public Informante ToInformante() => new Informante(IdDeUsuario, Nome);
+    public Recrutador ToRecrutador() => new Recrutador(IdDeUsuario, Nome);
 }

@@ -1,4 +1,5 @@
-using domain.CadastroDeAtividades.ObjetosDeValor;
+
+using domain.IdentidadeEAcesso;
 using domain.SeedWork;
 
 namespace domain.GestaoDePontos.Entidades;

@@ -1,7 +1,6 @@
 using System.Text.Json.Serialization;
 using domain.CadastroDeAtividades.Enumeraveis;
-
-using domain.CadastroDeAtividades.ObjetosDeValor;
+using domain.IdentidadeEAcesso;
 using domain.SeedWork;
 
 namespace domain.CadastroDeAtividades.Entidades;

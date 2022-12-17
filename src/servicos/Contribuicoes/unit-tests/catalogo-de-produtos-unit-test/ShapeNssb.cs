@@ -1,6 +1,7 @@
-using domain.CadastroDeAtividades.ObjetosDeValor;
+
 using domain.CatalogoDeProdutos.Entidades;
 using domain.CatalogoDeProdutos.Enumeraveis;
+using domain.IdentidadeEAcesso;
 using mocks_para_tests;
 using Xunit.Priority;
 

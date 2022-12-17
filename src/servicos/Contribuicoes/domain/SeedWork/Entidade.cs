@@ -1,4 +1,6 @@
-using domain.CadastroDeAtividades.ObjetosDeValor;
+
+
+using domain.IdentidadeEAcesso;
 
 namespace domain.SeedWork;
 public abstract class Entidade
