@@ -1,15 +1,20 @@
 
 
 using domain.IdentidadeEAcesso;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Bson.Serialization.IdGenerators;
 
 namespace domain.SeedWork;
 public abstract class Entidade
 {
-    public Guid Id { get; private set; }
+    
+    [BsonRepresentation(BsonType.ObjectId)]
+    public string Id { get; private set; }
 
     protected Entidade(DateTime criadoEm, Criador criador)
-    {
-        Id = Guid.NewGuid();
+    {        
+        Id = ObjectId.GenerateNewId().ToString();
         CriadoEm = criadoEm;
         Criador = criador;
     }

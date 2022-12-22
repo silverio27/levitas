@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "catalogo-de-produtos-unit-t
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "troca-unit-test", "unit-tests\troca-unit-test\troca-unit-test.csproj", "{C04FBDAB-D2B9-4EF5-9117-CB55EB1FB85E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "infra", "infra\infra.csproj", "{4212A32A-AAD6-4FFE-BA92-73A8A157CADB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api", "api\api.csproj", "{58F89347-B278-42FE-A398-9520D7862621}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,5 +46,13 @@ Global
 		{C04FBDAB-D2B9-4EF5-9117-CB55EB1FB85E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C04FBDAB-D2B9-4EF5-9117-CB55EB1FB85E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C04FBDAB-D2B9-4EF5-9117-CB55EB1FB85E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4212A32A-AAD6-4FFE-BA92-73A8A157CADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4212A32A-AAD6-4FFE-BA92-73A8A157CADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4212A32A-AAD6-4FFE-BA92-73A8A157CADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4212A32A-AAD6-4FFE-BA92-73A8A157CADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58F89347-B278-42FE-A398-9520D7862621}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58F89347-B278-42FE-A398-9520D7862621}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58F89347-B278-42FE-A398-9520D7862621}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58F89347-B278-42FE-A398-9520D7862621}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

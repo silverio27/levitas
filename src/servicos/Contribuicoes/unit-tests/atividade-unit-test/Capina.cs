@@ -50,7 +50,7 @@ public class Capina
                     x.IdDeUsuario == Usuarios.Dyego.IdDeUsuario ||
                     x.IdDeUsuario == Usuarios.Nathan.IdDeUsuario)
              .ToList();
-        contribuidoresPresentes.ForEach(x => capina.ConfirmarPresenca(x));
+        contribuidoresPresentes.ForEach(x => capina.ConfirmarPresenca(x.Id));
 
         Assert.Equal(3, capina.Contribuidores.Count);
         Assert.True(contribuidores.All(x => x.ConsentiuComOsTermos));
@@ -62,14 +62,11 @@ public class Capina
         Recrutador recrutador = new(dyego);
         return new()
             {
-                new(atividade: capina,
-                    usuario: Usuarios.Nathan,
+                new(usuario: Usuarios.Nathan,
                     recrutador: recrutador),
-                new(atividade: capina,
-                    usuario: Usuarios.Felix,
+                new(usuario: Usuarios.Felix,
                     recrutador: recrutador),
-                new(atividade: capina,
-                    usuario: Usuarios.Dyego,
+                new(usuario: Usuarios.Dyego,
                     recrutador: recrutador)
             };
     }
@@ -78,12 +75,11 @@ public class Capina
     public void Jhuan_saiu_da_atividade()
     {
         Recrutador recrutador = new(dyego);
-        Contribuidor jhuan = new(atividade: capina,
-                    usuario: Usuarios.Jhuan,
+        Contribuidor jhuan = new(usuario: Usuarios.Jhuan,
                     recrutador: recrutador);
 
         capina.Ingressar(jhuan);
-        capina.Sair(jhuan);
+        capina.Sair(jhuan.Id);
 
     }
 
@@ -93,15 +89,14 @@ public class Capina
     public void Andre_faltou_na_atividade()
     {
         Recrutador recrutador = new(dyego);
-        Contribuidor andre = new(atividade: capina,
-                    usuario: Usuarios.Andre,
+        Contribuidor andre = new(usuario: Usuarios.Andre,
                     recrutador: recrutador);
 
         capina.Ingressar(andre);
 
         capina.InformarFalta(
             informante: new(Usuarios.Dyego),
-            contribuidor: andre);
+            IdDoContribuidor: andre.Id);
 
         Assert.Equal(StatusDoContribuidor.Faltou, andre.Status);
     }
@@ -116,7 +111,7 @@ public class Capina
                     x.IdDeUsuario == Usuarios.Nathan.IdDeUsuario)
              .ToList();
 
-        contribuidoresPresentes.ForEach(x => capina.ConfirmarPresenca(x));
+        contribuidoresPresentes.ForEach(x => capina.ConfirmarPresenca(x.Id));
 
         Assert.Equal(3, capina.Contribuidores.Count(x => x.Status == StatusDoContribuidor.PresencaConfirmada));
     }
@@ -125,8 +120,8 @@ public class Capina
     public void Dyego_faz_o_upload_de_2_fotos()
     {
         Criador dyego = new(Usuarios.Dyego);
-        var foto1 = new Foto(capina, "colocando a cantoneira no caixote", "", "../foto1.jpeg", dyego);
-        var foto2 = new Foto(capina, "campeonato game of skate", "", "../foto2.jpeg", dyego);
+        var foto1 = new Foto("colocando a cantoneira no caixote", "", "../foto1.jpeg", dyego);
+        var foto2 = new Foto("campeonato game of skate", "", "../foto2.jpeg", dyego);
 
         capina.AdicionarFoto(criador: dyego, foto: foto1);
         capina.AdicionarFoto(criador: dyego, foto: foto2);
@@ -151,7 +146,7 @@ public class Capina
         _logger.WriteLine("Fotos: {0}", string.Join(',', capina.Fotos.Select(x => x.Url)));
         _logger.WriteLine("Tamanho: {0}", capina.Tamanho);
         _logger.WriteLine("Duração: {0}", capina.Duracao);
-        _logger.WriteLine("Data da execucao: {0}", capina.DataDaExecucao);
+        _logger.WriteLine("Dayta da execucao: {0}", capina.DataDaExecucao);
         _logger.WriteLine("Pontos: {0}", capina.Pontos);
         _logger.WriteLine("Criado em: {0}", capina.CriadoEm);
         _logger.WriteLine("Criado por: {0}", capina.Criador.Nome);

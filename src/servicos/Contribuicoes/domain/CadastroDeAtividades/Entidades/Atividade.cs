@@ -1,4 +1,4 @@
-using System.Text.Json;
+using System.Linq;
 using domain.CadastroDeAtividades.Enumeraveis;
 using domain.IdentidadeEAcesso;
 using domain.SeedWork;
@@ -40,24 +40,24 @@ public class Atividade : RaizDaAgregacao
         AdicionarAlteracaoAoHistorico($"{contribuidor.Nome} ingressou na atividade.");
     }
 
-    public void ConfirmarPresenca(Contribuidor contribuidor)
+    public void ConfirmarPresenca(string idDoContribuidor)
     {
-        var _contribuidor = Contribuidores.First(x => x.Id == contribuidor.Id);
-        _contribuidor.AlterarStatusDoContribuidor(StatusDoContribuidor.PresencaConfirmada);
+        var contribuidor = Contribuidores.First(x => x.Id == idDoContribuidor);
+        contribuidor.AlterarStatusDoContribuidor(StatusDoContribuidor.PresencaConfirmada);
 
         AdicionarAlteracaoAoHistorico($"{contribuidor.Nome} confirmou presença na atividade.");
     }
-    public void InformarFalta(Informante informante, Contribuidor contribuidor)
+    public void InformarFalta(Informante informante, string IdDoContribuidor)
     {
-        var _contribuidor = Contribuidores.First(x => x.Id == contribuidor.Id);
-        _contribuidor.AlterarStatusDoContribuidor(StatusDoContribuidor.Faltou);
+        var contribuidor = Contribuidores.FirstOrDefault(x => x.Id == IdDoContribuidor);
+        contribuidor!.AlterarStatusDoContribuidor(StatusDoContribuidor.Faltou);
 
         AdicionarAlteracaoAoHistorico($"{informante.Nome} notificou a falta do contribuidor '{contribuidor.Nome}' na atividade.");
     }
-    public void Sair(Contribuidor contribuidor)
+    public void Sair(string IdDoContribuidor)
     {
-        var _contribuidor = Contribuidores.First(x => x.Id == contribuidor.Id);
-        _contribuidor.AlterarStatusDoContribuidor(StatusDoContribuidor.Saiu);
+        var contribuidor = Contribuidores.FirstOrDefault(x => x.Id == IdDoContribuidor);
+        contribuidor!.AlterarStatusDoContribuidor(StatusDoContribuidor.Saiu);
 
         AdicionarAlteracaoAoHistorico($"{contribuidor.Nome} saiu da atividade.");
     }

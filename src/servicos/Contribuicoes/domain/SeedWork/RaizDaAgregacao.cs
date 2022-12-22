@@ -10,12 +10,12 @@ public abstract class RaizDaAgregacao : Entidade
         Historico = new();
     }
 
-    public List<Historico<Entidade>> Historico { get; private set; }
+    public List<Historico> Historico { get; private set; }
 
 
     public void AdicionarAlteracaoAoHistorico(string mensagem)
     {
         AtualizarDataDeAlteracao();
-        Historico.Add(new(this, mensagem));
+        Historico.Add(new(mensagem));
     }
 }
