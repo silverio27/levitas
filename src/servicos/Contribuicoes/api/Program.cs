@@ -10,7 +10,14 @@ var builder = WebApplication.CreateBuilder(args);
 var configureBinderMongo = builder.Configuration.GetSection("MongoDB");
 builder.Services.Configure<MongoSettings>(configureBinderMongo);
 builder.Services.AddSingleton<ContribuicoesContexto>();
-builder.Services.AddSingleton<IAtividades, Atividades>();
+builder.Services.AddScoped<IAtividades, Atividades>();
+
+var configureBinderStorage = builder.Configuration.GetSection("Storage");
+builder.Services.Configure<StorageSettings>(configureBinderStorage);
+builder.Services.AddSingleton<StorageContext>();
+builder.Services.AddScoped<IFotos, Fotos>();
+
+
 builder.Services.AddMediatR(typeof(Program).GetTypeInfo().Assembly);
 
 builder.Services.AddControllers();
@@ -26,6 +33,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors((x)=>x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
 app.UseHttpsRedirection();
 

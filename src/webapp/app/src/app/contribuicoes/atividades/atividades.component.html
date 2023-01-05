@@ -1,0 +1,39 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">
+  <span>Atividades</span>
+  <span style="flex: 1 1 auto"></span>
+  <a mat-raised-button routerLink="nova-atividade">Nova atividade</a>
+</mat-toolbar>
+
+<div class="conteudo">
+  <div class="filtros">
+    <h4 class="subtitulo" style="font-weight: bold;">Filtros</h4>
+    <section  [formGroup]="filtros">
+      <h4>Selecione o status:</h4>
+      <p><mat-checkbox formControlName="afazer">A fazer</mat-checkbox></p>
+      <p><mat-checkbox formControlName="concluido">Concluído</mat-checkbox></p>
+
+      <mat-form-field appearance="outline" style="width: 100%;">
+        <mat-label>Selecione um intervalo</mat-label>
+        <mat-date-range-input [formGroup]="filtros" [rangePicker]="picker">
+          <input matStartDate formControlName="start" placeholder="Start date">
+          <input matEndDate formControlName="end" placeholder="End date">
+        </mat-date-range-input>
+  
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-date-range-picker #picker></mat-date-range-picker>
+      
+      </mat-form-field>
+      
+    </section>
+    
+    <mat-divider></mat-divider>
+
+    <button mat-raised-button style="width: 100%;" color="primary">Pesquisar</button>
+  </div>
+  <div class="atividades">
+    <atividade-thumbnail
+      [atividade]="atividade"
+      *ngFor="let atividade of atividadesLista"
+    ></atividade-thumbnail>
+  </div>
+</div>

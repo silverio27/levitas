@@ -1,0 +1,40 @@
+<a  [routerLink]="['gerenciar-atividade', atividade.id]" style="color: inherit; text-decoration: none;">
+
+  <mat-card class="example-card"
+  >
+    <mat-card-header>
+      <mat-card-title >{{ atividade.nome }}</mat-card-title>
+      <mat-card-subtitle>
+        {{ atividade.status  }}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      <p>
+        <mat-icon color="primary" >description</mat-icon>
+        <span style="font-weight: bold">Descrição: </span>
+      </p>
+      <p class="subtitulo">{{ atividade.descricao }}</p>
+      <mat-divider style="width: 100%; margin-bottom: 10px;"></mat-divider>
+      <div class="conteudo">
+        <div class="mat-subtitle-2" >
+          <mat-icon color="primary">event</mat-icon>
+          Realizado: {{ atividade.dataDaExecucao | date : "dd/MM/yyyy" }}
+        </div>
+        <div class="mat-subtitle-2">
+          <mat-icon color="primary">scoreboard</mat-icon>Pontos:
+          {{ atividade.pontos }}
+        </div>
+  
+        <div class="mat-subtitle-2">
+          <mat-icon color="primary">group</mat-icon>Contribuidores : {{ atividade.contribuidores.length }}
+        </div>
+        <div class="mat-subtitle-2">
+          <mat-icon color="primary">photo_camera</mat-icon>Fotos : {{ atividade.fotos.length }}
+        </div>
+        <div class="mat-subtitle-2">
+          <mat-icon color="primary">schedule</mat-icon>Horário : {{ atividade.duracao }}
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</a>

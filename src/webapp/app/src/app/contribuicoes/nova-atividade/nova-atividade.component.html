@@ -1,0 +1,56 @@
+
+<form  [formGroup]="atividadeForm"  (submit)="submit()">
+  <mat-toolbar color="primary" class="mat-elevation-z6">
+    <a routerLink="../" style="color: white">
+      <button mat-icon-button><mat-icon>arrow_back</mat-icon></button></a
+    >
+    <span>Nova atividade</span>
+    <span style="flex: 1 1 auto"></span>
+    <button mat-raised-button type="submit">Salvar</button>
+  </mat-toolbar>
+  <div class="example-form">
+    
+    <div class="form-group">
+      <mat-form-field class="example-full-width">
+        <mat-label>Nome</mat-label>
+        <input matInput placeholder="Ex.: Capina" formControlName="nome" />
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field class="example-full-width">
+        <mat-label>Descrição</mat-label>
+        <textarea
+          matInput
+          placeholder="Ex.: Capina"
+          formControlName="descricao"
+        ></textarea>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <label id="example-radio-group-label">Tamanho:</label>
+      <mat-radio-group
+        aria-labelledby="example-radio-group-label"
+        class="example-radio-group"
+        formControlName="tamanho"
+      >
+        <mat-radio-button
+          class="example-radio-button"
+          *ngFor="let tamanho of tamanhos"
+          [value]="tamanho.value"
+        >
+          {{ tamanho.key }}
+        </mat-radio-button>
+      </mat-radio-group>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Escolha uma data</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dataDaExecucao">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    
+    </div>
+  </div>
+
+</form>

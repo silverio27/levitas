@@ -143,7 +143,7 @@ public class Capina
         _logger.WriteLine("Contribuidores: {0}",
             string.Join(',', capina.Contribuidores.Select(x => x.Nome)));
         _logger.WriteLine("Status: {0}", capina.Status);
-        _logger.WriteLine("Fotos: {0}", string.Join(',', capina.Fotos.Select(x => x.Url)));
+        _logger.WriteLine("Fotos: {0}", string.Join(',', capina.Fotos.Select(x => x.Nome)));
         _logger.WriteLine("Tamanho: {0}", capina.Tamanho);
         _logger.WriteLine("Duração: {0}", capina.Duracao);
         _logger.WriteLine("Dayta da execucao: {0}", capina.DataDaExecucao);

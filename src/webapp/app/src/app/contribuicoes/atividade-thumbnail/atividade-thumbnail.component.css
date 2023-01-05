@@ -1,0 +1,28 @@
+mat-card {
+  max-width: 400px;
+}
+
+mat-card-title {
+  color: #3f51b5;
+}
+
+p,
+.conteudo > div,
+.alinhar-ao-centro-horizontal {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.conteudo > div {
+  font-size: small;
+}
+
+mat-icon {
+  margin-right: 5px;
+}

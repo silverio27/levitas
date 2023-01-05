@@ -1,3 +1,4 @@
+using api.CadastroDeAtiividades.Eventos;
 using api.Extensoes;
 using api.SeedWork;
 using domain.CadastroDeAtividades.Entidades;
@@ -7,7 +8,7 @@ using MediatR;
 
 namespace api.CadastroDeAtiividades.Comandos
 {
-    public class AtividadeParaRemover :  IRequest<Resposta>
+    public class AtividadeParaRemover : IRequest<Resposta>
     {
         public string? Id { get; set; }
     }
@@ -32,9 +33,11 @@ namespace api.CadastroDeAtiividades.Comandos
     public class RemoverAtividade : IRequestHandler<AtividadeParaRemover, Resposta>
     {
         private readonly IAtividades _atividades;
-        public RemoverAtividade(IAtividades atividades)
+        private readonly IMediator _mediator;
+        public RemoverAtividade(IAtividades atividades, IMediator mediator)
         {
             _atividades = atividades;
+            _mediator = mediator;
         }
         public async Task<Resposta> Handle(AtividadeParaRemover request, CancellationToken cancellationToken)
         {
@@ -45,6 +48,10 @@ namespace api.CadastroDeAtiividades.Comandos
 
             Atividade atividade = await _atividades.ObterPorId(request.Id!);
             await _atividades.Excluir(atividade);
+
+            var nomeDasFotos = atividade.Fotos.Select(x => x.Nome).ToList();
+
+            await _mediator.Publish(new FotosDoStorage() { Nomes = nomeDasFotos });
 
             return Resposta.Ok("Atividade removida", request);
         }

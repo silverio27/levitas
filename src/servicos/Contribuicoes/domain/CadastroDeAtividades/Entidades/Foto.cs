@@ -9,11 +9,11 @@ public class Foto : Entidade
     {
         Descricao = descricao;
         Sessao = sessao;
-        Url = url;
+        Nome = url;
     }
 
     public string Descricao { get; private set; }
     public string Sessao { get; private set; }
-    public string Url { get; private set; }
+    public string Nome { get; private set; }
 
 }

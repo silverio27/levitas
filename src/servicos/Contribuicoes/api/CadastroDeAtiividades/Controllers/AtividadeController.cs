@@ -118,4 +118,30 @@ public class AtividadeController : ControllerBase
 
         return BadRequest(resposta);
     }
+
+    [HttpPut("adicionar-foto/{atividadeId}")]
+    public async Task<ActionResult> AdicionarFoto(string atividadeId, FotoASerAdicionada fotoASerAdicionada)
+    {
+        if (atividadeId != fotoASerAdicionada.IdDaAtividade)
+            return BadRequest(Resposta.Fail("Id da atividade divergente no parametro e no corpo da requisição."));
+
+        var resposta = await _mediator.Send(fotoASerAdicionada);
+        if (resposta.Sucesso)
+            return NoContent();
+
+        return BadRequest(resposta);
+    }
+
+    [HttpPut("remover-foto/{atividadeId}")]
+    public async Task<ActionResult> RemoverFoto(string atividadeId, FotoASerRemovida fotoASerRemovida)
+    {
+        if (atividadeId != fotoASerRemovida.IdDaAtividade)
+            return BadRequest(Resposta.Fail("Id da atividade divergente no parametro e no corpo da requisição."));
+
+        var resposta = await _mediator.Send(fotoASerRemovida);
+        if (resposta.Sucesso)
+            return NoContent();
+
+        return BadRequest(resposta);
+    }
 }

@@ -1,0 +1,1 @@
+azurite --silent --location azurite\azurite --debug azurite\azurite\debug.log

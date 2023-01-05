@@ -1,0 +1,23 @@
+.conteudo {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  margin: 10px;
+  height: calc(100% - 74px);
+  overflow: auto;
+}
+.info > div,
+.info{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.info{
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+}

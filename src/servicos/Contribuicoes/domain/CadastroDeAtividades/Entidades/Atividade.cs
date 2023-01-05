@@ -1,4 +1,3 @@
-using System.Linq;
 using domain.CadastroDeAtividades.Enumeraveis;
 using domain.IdentidadeEAcesso;
 using domain.SeedWork;
@@ -73,8 +72,9 @@ public class Atividade : RaizDaAgregacao
         AdicionarAlteracaoAoHistorico($"{criador.Nome} adicionou uma foto.");
     }
 
-    public void RemoverFoto(Criador criador, Foto foto)
+    public void RemoverFoto(Criador criador, string idDaFoto)
     {
+        Foto foto = Fotos.FirstOrDefault(x=> x.Id == idDaFoto)!;
         Fotos.Remove(foto);
         AdicionarAlteracaoAoHistorico($"{criador.Nome} removeu uma foto.");
     }
